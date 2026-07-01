@@ -93,10 +93,10 @@ python scanner.py --output json
 ```
 
 ### Before — 8 findings including MFA warning
-![Scan with findings](screenshots/'Screenshot 2026-07-01 at 16-33-14 AWS Misconfiguration Report.png')
+![Scan with findings](screenshots/scan_with_findings.png)
 
 ### After — MFA configured, finding resolved
-![Scan after MFA fix](screenshots/'Screenshot 2026-07-01 at 16-35-08 AWS Misconfiguration Reportffixiam.png')
+![Scan after MFA fix](screenshots/scan_after_mfa_fix.png)
 
 ---
 
