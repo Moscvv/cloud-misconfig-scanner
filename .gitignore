@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# AWS credentials — NEVER commit these
+.aws/
+credentials
+*.csv
+
+# Reports (contain account info — keep local)
+report_*.json
+report_*.html
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
