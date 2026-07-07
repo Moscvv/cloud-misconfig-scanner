@@ -30,7 +30,7 @@ A Python CLI tool that audits an AWS account for common security misconfiguratio
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cloud-misconfig-scanner.git
+git clone https://github.com/Moscvv/cloud-misconfig-scanner.git
 cd cloud-misconfig-scanner
 
 python3 -m venv venv
@@ -153,7 +153,29 @@ cloud-misconfig-scanner/
 - AWS Free Tier (S3, EC2, IAM)
 
 ---
+## 🩹 Troubleshooting
 
+  | Problem | Likely Cause | Fix |
+  |---|---|---|
+  | `[ERROR] No AWS credentials found` | No credentials configured | Run `aws configure` and set your Access Key ID / Secret |
+  | `AccessDenied` on a specific check | IAM user/role missing a permission | Attach the read-only permissions listed under [Prerequisites](#prerequisites) |
+  | Scan hangs or times out | Large account, slow network, or throttling | Narrow scope with `--checks` and/or `--region`; the tool already paginates, so retry once rate limits reset |
+  | `--output html` produces no file | Ran with `--output terminal` (default) by mistake | Re-run with `--output html` or `--output json` explicitly |
+
+  ---
+
+  ## 🤝 Contributing
+
+  Contributions are welcome! To propose a change:
+
+  1. Fork the repo and create a branch off `main`.
+  2. Keep new checks consistent with the existing pattern — one module per AWS service in `scanners/`, returning a list of finding dicts with `severity`, `resource`, `issue`, and optional `detail`.
+  3. Only use read-only AWS calls (`List*`, `Get*`, `Describe*`) — this tool never modifies resources.
+  4. Open a pull request describing the check/fix and, if possible, include sample output.
+
+  Ideas for a first contribution are listed in the [Roadmap](#-roadmap) above.
+
+  ---
 ## 📄 License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
