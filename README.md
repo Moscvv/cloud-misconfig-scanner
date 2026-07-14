@@ -1,4 +1,4 @@
-# 🔍 Cloud Misconfiguration Scanner
+# Cloud Misconfiguration Scanner
 
 A Python CLI tool that audits an AWS account for common security misconfigurations. Built with [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), the AWS SDK for Python.
 
@@ -19,7 +19,7 @@ A Python CLI tool that audits an AWS account for common security misconfiguratio
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -116,7 +116,7 @@ cloud-misconfig-scanner/
 
 ---
 
-## 💡 Design Decisions
+## Design Decisions
 
 **Modular scanners** — each service (S3, EC2, IAM) is a separate module. Adding a new check (e.g. CloudTrail logging disabled, RDS public snapshots) means adding one file without touching the core.
 
@@ -136,7 +136,7 @@ cloud-misconfig-scanner/
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 - [ ] CloudTrail: detect logging disabled per region
 - [ ] RDS: public snapshots and instances
@@ -146,14 +146,14 @@ cloud-misconfig-scanner/
 
 ---
 
-## 🛠 Built With
+## Built With
 
 - [Python 3](https://www.python.org/)
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) — AWS SDK for Python
 - AWS Free Tier (S3, EC2, IAM)
 
 ---
-## 🩹 Troubleshooting
+## Troubleshooting
 
   | Problem | Likely Cause | Fix |
   |---|---|---|
@@ -164,7 +164,7 @@ cloud-misconfig-scanner/
 
   ---
 
-  ## 🤝 Contributing
+  ## Contributing
 
   Contributions are welcome! To propose a change:
 
